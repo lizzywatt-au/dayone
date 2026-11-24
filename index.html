@@ -590,6 +590,11 @@ html body header#top .topbar .nav a{grid-column:auto!important;width:100%!import
 html body header#top .topbar .nav a[href="#support"]{order:99!important;grid-column:1 / -1!important;white-space:nowrap!important}
 }
 @media (max-width:360px){html body header#top .topbar .nav a{font-size:10.5px!important;padding:6px 6px!important}}
+/* phones: the cream "Only Australia…" box meets the chart section directly, with no green strip between */
+@media (max-width:760px){
+html body section#problem.band{padding-bottom:0!important}
+html body #problem p.gl2-aus{margin-bottom:0!important}
+}
 /* tighter spacing: contact section and the sources section below it */
 html body section#contact.band{padding-top:clamp(22px,2.6vw,36px)!important;padding-bottom:clamp(22px,2.6vw,36px)!important}
 html body section#source.band{padding-top:clamp(22px,2.6vw,36px)!important}
