@@ -595,6 +595,16 @@ html body header#top .topbar .nav a[href="#support"]{order:99!important;grid-col
 html body section#problem.band{padding-bottom:0!important}
 html body #problem p.gl2-aus{margin-bottom:0!important}
 }
+/* chart row labels on phones: "12 months" as a heading above its bar (wide screens unchanged) */
+html body section#compare .row .lab .lu-m{display:none}
+@media (max-width:520px){
+html body section#compare .row{grid-template-columns:1fr!important;row-gap:6px!important}
+html body section#compare .row .lab{display:flex!important;align-items:baseline!important;gap:.35em!important;white-space:nowrap!important;padding:0!important;background:none!important;color:#253e38!important;width:auto!important}
+html body section#compare .row .lab .ln{display:inline!important;font-size:34px!important;line-height:1!important;font-weight:900!important;letter-spacing:-.03em}
+html body section#compare .row .lab .lu{display:inline!important;font-size:17px!important;margin:0!important;font-weight:800!important}
+html body section#compare .row .lab .lu-d{display:none!important}
+html body section#compare .row .lab .lu-m{display:inline!important}
+}
 /* tighter spacing: contact section and the sources section below it */
 html body section#contact.band{padding-top:clamp(22px,2.6vw,36px)!important;padding-bottom:clamp(22px,2.6vw,36px)!important}
 html body section#source.band{padding-top:clamp(22px,2.6vw,36px)!important}
@@ -1382,7 +1392,7 @@ function draw(){
  var ch=document.getElementById("chart");ch.textContent="";
  keys.forEach(function(k){
   var hasAU=groups[k].some(function(p){return p.n==="Australia"});var row=el("div","row"+(k===0?" zero":"")+(hasAU?" au":""));
-  var lab=el("div","lab",fmt(k));
+  var lab=el("div","lab");var lt=fmt(k).split(" ");lab.appendChild(el("span","ln",lt[0]));var lu=el("span","lu");lu.appendChild(el("span","lu-d"," "+lt[1]));lu.appendChild(el("span","lu-m",k===0?"one":(k===4.6?"weeks":"months")));lab.appendChild(lu);
   var body=el("div");var tr=el("div","track");var f=el("div","fill");f.style.width=Math.max(k/12*100,k===0?100:0)+"%";tr.appendChild(f);body.appendChild(tr);
   var g=groups[k];
   var cs=g.filter(function(p){return p.r==="Country"});
