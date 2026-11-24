@@ -590,20 +590,6 @@ html body header#top .topbar .nav a{grid-column:auto!important;width:100%!import
 html body header#top .topbar .nav a[href="#support"]{order:99!important;grid-column:1 / -1!important;white-space:nowrap!important}
 }
 @media (max-width:360px){html body header#top .topbar .nav a{font-size:10.5px!important;padding:6px 6px!important}}
-/* very narrow phones: chart labels no longer collide with the bars, and the contact card no longer pushes the page sideways */
-@media (max-width:520px){
-html body section#compare .row{grid-template-columns:min(23vw,96px) minmax(0,1fr)!important}
-html body section#compare .row .lab{font-size:min(5.4vw,21px)!important;white-space:nowrap!important}
-html body section#compare .row.au .lab{padding:4px 6px!important}
-html body section#contact .contact-card{flex-wrap:wrap!important}
-html body section#contact .contact-card>div{flex:1 1 100%!important;min-width:0!important;overflow-wrap:anywhere}
-}
-@media (max-width:520px){html body #rights .rg2-h #legend::after{width:min(360px,calc(100vw - 80px))!important}}
-/* phones: the cream "Only Australia…" box meets the chart section directly, with no green strip between */
-@media (max-width:760px){
-html body section#problem.band{padding-bottom:0!important}
-html body #problem p.gl2-aus{margin-bottom:0!important}
-}
 /* tighter spacing: contact section and the sources section below it */
 html body section#contact.band{padding-top:clamp(22px,2.6vw,36px)!important;padding-bottom:clamp(22px,2.6vw,36px)!important}
 html body section#source.band{padding-top:clamp(22px,2.6vw,36px)!important}
