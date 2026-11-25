@@ -673,6 +673,13 @@ html body #problem p.gl2-aus .acc-i svg{width:18px;height:18px;transition:transf
 html body #problem p.gl2-aus .acc-card[aria-expanded="true"] .acc-i svg{transform:rotate(45deg)}
 @media(prefers-reduced-motion:reduce){html body #problem p.gl2-aus .acc-card,html body #problem p.gl2-aus .acc-i svg{transition:none}}
 html.acc-js section#rights:not(.acc-open){display:block!important;max-height:0!important;min-height:0!important;overflow:hidden!important;padding:0!important;margin:0!important;border:0!important;visibility:hidden}
+/* colour rhythm: plum moves up to the comparison band; the two plum bands in the experts section go green */
+html body section#problem.band-olive{background:#3d2438!important}
+html body section#problem .gl2-bar{background:rgba(245,233,215,.22)!important}
+html body #problem p.gl2-aus::before{background:#f5e9d7}
+html body #problem p.gl2-aus .acc-card.c2{background:#3d2438!important}
+.imp-band .imp-grid{background:#253e38!important;box-shadow:0 0 0 100vmax #253e38!important}
+@media(max-width:860px){html body section#experts div.imp-band:not(.imp-band2){background:#253e38!important;box-shadow:0 0 0 100vmax #253e38!important}}
 /* tighter spacing: contact section and the sources section below it */
 html body section#contact.band{padding-top:clamp(22px,2.6vw,36px)!important;padding-bottom:clamp(22px,2.6vw,36px)!important}
 html body section#source.band{padding-top:clamp(22px,2.6vw,36px)!important}
