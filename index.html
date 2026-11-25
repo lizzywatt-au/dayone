@@ -651,7 +651,7 @@ html body #problem p.gl2-aus .cmp-toggle svg{width:16px;height:16px;flex:0 0 aut
 html body #problem p.gl2-aus .cmp-toggle[aria-expanded="true"] svg{transform:rotate(180deg)}
 @media(prefers-reduced-motion:reduce){html body #problem p.gl2-aus .cmp-toggle svg{transition:none}}
 html.acc-js section#compare:not(.acc-open){display:block!important;max-height:0!important;min-height:0!important;overflow:hidden!important;padding:0!important;margin:0!important;border:0!important;visibility:hidden}
-html body section#compare #compare-h{position:absolute!important;width:1px!important;height:1px!important;margin:-1px!important;padding:0!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;border:0!important}
+html body section#compare #compare-h{font-family:"Permanent Marker","Marker Felt",cursive!important;font-weight:400!important;letter-spacing:0!important;line-height:1.2!important;font-size:clamp(22px,2.9vw,38px)!important;color:#253e38!important;margin:0!important;padding:0!important}
 @media(min-width:861px){html body #problem p.gl2-aus{white-space:normal!important;flex-wrap:nowrap!important;font-size:clamp(24px,2.4vw,31px)!important}html body #problem p.gl2-aus>span:first-child{flex:1 1 auto;min-width:0}}
 html body #problem h2#worst-h{margin-bottom:clamp(14px,2vw,24px)!important}
 /* accordion card under the question heading */
@@ -794,7 +794,7 @@ html body section#experts div#economy.biz p.bz2-k{color:#253e38!important;font-s
 
 <section class="band band-cream" id="compare" aria-labelledby="compare-h">
  <div class="wrap">
-  <div class="cmp-head"><h2 class="cmp-top" id="compare-h">Compare every country</h2>
+  <div class="cmp-head"><h2 class="cmp-top" id="compare-h">Parental leave waiting period for pregnant women across 53 countries</h2>
   <div class="callout rtr-note" id="legend" tabindex="0"></div></div>
   <div id="detail" aria-live="polite" class="dt-empty"><h3>Select a place</h3><p>Tap or click any name to see its minimum service rule.</p></div>
   <script>(function(){var d=document.getElementById('detail');if(!d)return;function sync(){var h=d.querySelector('h3');var empty=!h||h.textContent==='Select a place';d.classList.toggle('dt-empty',empty);if(!empty&&!d.querySelector('.dt-x')){var b=document.createElement('button');b.type='button';b.className='dt-x';b.setAttribute('aria-label','Close');b.textContent='×';b.onclick=function(){d.classList.add('dt-empty')};d.insertBefore(b,d.firstChild)}}new MutationObserver(sync).observe(d,{childList:true});sync()})();</script>
