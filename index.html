@@ -686,11 +686,10 @@ html body #problem h2#worst-h{font-family:"Permanent Marker","Marker Felt",cursi
 html body h2#worst-h .hu::after{display:none!important;content:none!important}
 html body #problem .gl2-row:first-of-type{padding-top:clamp(18px,2.4vw,30px)!important}
 @media(min-width:860px){html body #problem .acc-t{white-space:nowrap!important}html body #problem .acc-txt{min-width:0}}
-/* "Only Australia" box matches the white expand box */
-html body section#problem p.gl2-aus{background:#fff!important;color:#000!important;border-radius:0!important;padding:16px 22px!important;margin:clamp(4px,1vw,12px) 0 0!important;font-weight:500!important;letter-spacing:0!important;line-height:1.3!important;font-size:clamp(18px,2.05vw,26.24px)!important}
-html body section#problem p.gl2-aus::before{display:none!important;content:none!important}
+/* "Only Australia" box: original shape, white with the same font as the expand box */
+html body section#problem p.gl2-aus{background:#fff!important;color:#000!important;font-weight:500!important;letter-spacing:0!important;line-height:1.3!important;font-size:clamp(18px,2.05vw,26.24px)!important}
+html body section#problem p.gl2-aus::before{background:#fff!important}
 html body section#problem p.gl2-aus mark{background:transparent!important;color:#000!important;font-weight:900!important;padding:0!important}
-html body section#problem.band{padding-bottom:clamp(28px,4vw,48px)!important}
 /* tighter spacing: contact section and the sources section below it */
 html body section#contact.band{padding-top:clamp(22px,2.6vw,36px)!important;padding-bottom:clamp(22px,2.6vw,36px)!important}
 html body section#source.band{padding-top:clamp(22px,2.6vw,36px)!important}
