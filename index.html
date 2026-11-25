@@ -685,6 +685,7 @@ html body #problem h2#worst-h{font-family:"Permanent Marker","Marker Felt",cursi
 @media(min-width:700px){html body #problem h2#worst-h{white-space:nowrap!important;font-size:calc((min(100vw,1100px) - 64px)/27.8)!important}}
 html body h2#worst-h .hu::after{display:none!important;content:none!important}
 html body #problem .gl2-row:first-of-type{padding-top:clamp(18px,2.4vw,30px)!important}
+@media(min-width:860px){html body #problem .acc-t{white-space:nowrap!important}html body #problem .acc-txt{min-width:0}}
 /* tighter spacing: contact section and the sources section below it */
 html body section#contact.band{padding-top:clamp(22px,2.6vw,36px)!important;padding-bottom:clamp(22px,2.6vw,36px)!important}
 html body section#source.band{padding-top:clamp(22px,2.6vw,36px)!important}
@@ -1662,4 +1663,5 @@ draw();
 </script>
 <script>(function(){var cards=document.querySelectorAll(".acc-card");if(!cards.length)return;function set(b,o,scroll){var p=document.getElementById(b.getAttribute("aria-controls"));if(!p)return;p.classList.toggle("acc-open",o);b.setAttribute("aria-expanded",o?"true":"false");var t=b.querySelector(".acc-t");if(!b._h)b._h=t.innerHTML;t.innerHTML=o?"Click here to hide the comparison":b._h;if(o&&scroll&&p.getBoundingClientRect().top>innerHeight*.75)p.scrollIntoView({behavior:"smooth",block:"start"})}cards.forEach(function(b){b.addEventListener("click",function(){set(b,b.getAttribute("aria-expanded")!=="true",true)});if(location.hash==="#"+b.getAttribute("aria-controls"))set(b,true,false)})})();</script>
 <script>(function(){var h=document.getElementById("worst-h");if(!h)return;function fit(){h.style.removeProperty("font-size");if(innerWidth<700)return;h.style.setProperty("font-size","100px","important");var w=h.scrollWidth,a=h.clientWidth;if(w>0)h.style.setProperty("font-size",Math.min(72,Math.floor(100*a/w*.985))+"px","important")}fit();addEventListener("resize",fit);addEventListener("load",fit);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit)})();</script>
+<script>(function(){var b=document.getElementById("cmp-toggle");if(!b)return;var t=b.querySelector(".acc-t"),i=b.querySelector(".acc-i");function fit(){t.style.removeProperty("font-size");if(innerWidth<860||b.getAttribute("aria-expanded")==="true")return;var c=getComputedStyle(b),avail=b.clientWidth-parseFloat(c.paddingLeft)-parseFloat(c.paddingRight)-i.offsetWidth-parseFloat(c.columnGap||16)-4;t.style.setProperty("font-size","100px","important");var w=t.scrollWidth;if(w>0)t.style.setProperty("font-size",Math.min(26.24,Math.floor(100*avail/w*10)/10)+"px","important")}fit();addEventListener("resize",fit);addEventListener("load",fit);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit)})();</script>
 </body></html>
