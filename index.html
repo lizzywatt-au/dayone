@@ -667,7 +667,8 @@ html body #problem .acc-card:focus-visible{outline:3px solid #e9824a;outline-off
 html body #problem .acc-card.c2:focus-visible{outline-color:#d96b50}
 html body #problem .acc-txt{display:block}
 html body #problem .acc-k{display:block;font-weight:700;font-size:12px;letter-spacing:.09em;text-transform:uppercase;opacity:.85;margin-bottom:5px}
-html body #problem .acc-t{display:block;font-weight:800;font-size:clamp(17px,1.6vw,21px);line-height:1.3}
+html body #problem .acc-t{display:block;font-weight:500;font-size:clamp(18px,2.05vw,26.24px);line-height:1.3}
+html body #problem .acc-t strong{font-weight:900}
 html body #problem .acc-i{flex:0 0 auto;width:40px;height:40px;border-radius:50%;background:#000;color:#fff;display:grid;place-items:center}
 html body #problem .acc-i svg{width:18px;height:18px;transition:transform .2s}
 html body #problem .acc-card[aria-expanded="true"] .acc-i svg{transform:rotate(45deg)}
@@ -763,7 +764,7 @@ html body section#experts div#economy.biz p.bz2-k{color:#253e38!important;font-s
 <section class="band band-olive" id="problem" aria-labelledby="worst-h">
  <div class="wrap gl">
   <h2 id="worst-h" class="gl-h">Is our waiting period <span class="hu">the worst in the world</span>?</h2>
-  <span class="acc-cards"><button type="button" class="acc-card c1" id="cmp-toggle" aria-expanded="false" aria-controls="compare" data-t="Click here to see a comparison of parental leave service tests across 53 countries"><span class="acc-txt"><span class="acc-t">Click here to see a comparison of parental leave service tests across 53 countries</span></span><span class="acc-i"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 3v10M3 8h10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></button></span>
+  <span class="acc-cards"><button type="button" class="acc-card c1" id="cmp-toggle" aria-expanded="false" aria-controls="compare" data-t="Click here to see a comparison of parental leave service tests across 53 countries"><span class="acc-txt"><span class="acc-t">Click here to see a comparison of <strong>parental leave service tests</strong> across 53 countries</span></span><span class="acc-i"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 3v10M3 8h10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></button></span>
   <div class="gl2-row">
    <p class="gl2-lead">47 of the 51 countries with national laws have <strong>day one maternity leave</strong> &ndash; that means no minimum service requirement at all for pregnant women.</p>
    <div class="gl2-stats" role="list">
@@ -1658,6 +1659,6 @@ draw();
   });
 })();
 </script>
-<script>(function(){var cards=document.querySelectorAll(".acc-card");if(!cards.length)return;function set(b,o,scroll){var p=document.getElementById(b.getAttribute("aria-controls"));if(!p)return;p.classList.toggle("acc-open",o);b.setAttribute("aria-expanded",o?"true":"false");b.querySelector(".acc-t").textContent=o?"Click here to hide the comparison":b.getAttribute("data-t");if(o&&scroll&&p.getBoundingClientRect().top>innerHeight*.75)p.scrollIntoView({behavior:"smooth",block:"start"})}cards.forEach(function(b){b.addEventListener("click",function(){set(b,b.getAttribute("aria-expanded")!=="true",true)});if(location.hash==="#"+b.getAttribute("aria-controls"))set(b,true,false)})})();</script>
+<script>(function(){var cards=document.querySelectorAll(".acc-card");if(!cards.length)return;function set(b,o,scroll){var p=document.getElementById(b.getAttribute("aria-controls"));if(!p)return;p.classList.toggle("acc-open",o);b.setAttribute("aria-expanded",o?"true":"false");var t=b.querySelector(".acc-t");if(!b._h)b._h=t.innerHTML;t.innerHTML=o?"Click here to hide the comparison":b._h;if(o&&scroll&&p.getBoundingClientRect().top>innerHeight*.75)p.scrollIntoView({behavior:"smooth",block:"start"})}cards.forEach(function(b){b.addEventListener("click",function(){set(b,b.getAttribute("aria-expanded")!=="true",true)});if(location.hash==="#"+b.getAttribute("aria-controls"))set(b,true,false)})})();</script>
 <script>(function(){var h=document.getElementById("worst-h");if(!h)return;function fit(){h.style.removeProperty("font-size");if(innerWidth<700)return;h.style.setProperty("font-size","100px","important");var w=h.scrollWidth,a=h.clientWidth;if(w>0)h.style.setProperty("font-size",Math.min(72,Math.floor(100*a/w*.985))+"px","important")}fit();addEventListener("resize",fit);addEventListener("load",fit);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit)})();</script>
 </body></html>
