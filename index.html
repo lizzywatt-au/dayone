@@ -690,6 +690,7 @@ html body #problem .gl2-row:first-of-type{padding-top:clamp(18px,2.4vw,30px)!imp
 html body section#problem p.gl2-aus{background:#fff!important;color:#000!important;padding:18px clamp(24px,3vw,44px) 18px 0!important;font-weight:500!important;letter-spacing:0!important;line-height:1.3!important;font-size:clamp(18px,2.05vw,26.24px)!important}
 html body section#problem p.gl2-aus::before{background:#fff!important}
 html body section#problem p.gl2-aus mark{background:transparent!important;color:#000!important;font-weight:900!important;padding:0!important}
+html.acc-js section#rights:not(.acc-open){display:block!important;max-height:0!important;min-height:0!important;overflow:hidden!important;padding:0!important;margin:0!important;border:0!important;visibility:hidden}
 /* tighter spacing: contact section and the sources section below it */
 html body section#contact.band{padding-top:clamp(22px,2.6vw,36px)!important;padding-bottom:clamp(22px,2.6vw,36px)!important}
 html body section#source.band{padding-top:clamp(22px,2.6vw,36px)!important}
@@ -770,7 +771,7 @@ html body section#experts div#economy.biz p.bz2-k{color:#253e38!important;font-s
 <section class="band band-olive" id="problem" aria-labelledby="worst-h">
  <div class="wrap gl">
   <h2 id="worst-h" class="gl-h">Is our waiting period <span class="hu">the worst in the world</span>?</h2>
-  <span class="acc-cards"><button type="button" class="acc-card c1" id="cmp-toggle" aria-expanded="false" aria-controls="compare" data-t="Click here to see a comparison of parental leave service tests across 53 countries"><span class="acc-txt"><span class="acc-t">Click here to see a comparison of <strong>parental leave service tests</strong> across 53 countries</span></span><span class="acc-i"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 3v10M3 8h10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></button></span>
+  <span class="acc-cards"><button type="button" class="acc-card c1" id="cmp-toggle" aria-expanded="false" aria-controls="compare rights" data-t="Click here to see a comparison of parental leave service tests across 53 countries"><span class="acc-txt"><span class="acc-t">Click here to see a comparison of <strong>parental leave service tests</strong> across 53 countries</span></span><span class="acc-i"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 3v10M3 8h10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></button></span>
   <div class="gl2-row">
    <p class="gl2-lead">47 of the 51 countries with national laws have <strong>day one maternity leave</strong> &ndash; that means no minimum service requirement at all for pregnant women.</p>
    <div class="gl2-stats" role="list">
@@ -791,6 +792,16 @@ html body section#experts div#economy.biz p.bz2-k{color:#253e38!important;font-s
 
 <div class="stat6-band"><div class="stat6-in"><div class="s6-box"><em>More than</em><b>1 in 6</b><em>employed Australian women</em></div><p><strong>have worked for their employer for under 12 months</strong>. Women are more likely than men to be in this position &ndash; <a href="#src-1" id="fn-1a" class="stat-link">18% compared with 16%</a>.</p></div></div>
 
+<section class="band band-cream" id="compare" aria-labelledby="compare-h">
+ <div class="wrap">
+  <div class="cmp-head"><h2 class="cmp-top" id="compare-h">Compare every country</h2>
+  <div class="callout rtr-note" id="legend" tabindex="0"></div></div>
+  <div id="detail" aria-live="polite" class="dt-empty"><h3>Select a place</h3><p>Tap or click any name to see its minimum service rule.</p></div>
+  <script>(function(){var d=document.getElementById('detail');if(!d)return;function sync(){var h=d.querySelector('h3');var empty=!h||h.textContent==='Select a place';d.classList.toggle('dt-empty',empty);if(!empty&&!d.querySelector('.dt-x')){var b=document.createElement('button');b.type='button';b.className='dt-x';b.setAttribute('aria-label','Close');b.textContent='×';b.onclick=function(){d.classList.add('dt-empty')};d.insertBefore(b,d.firstChild)}}new MutationObserver(sync).observe(d,{childList:true});sync()})();</script>
+  <div id="chart"></div>
+ </div>
+</section>
+
 <section class="band rg2sec" id="rights" aria-labelledby="rights-h">
  <div class="rg2">
   <div class="rg2-l">
@@ -805,16 +816,6 @@ html body section#experts div#economy.biz p.bz2-k{color:#253e38!important;font-s
    <p class="rg2-no">No equivalent</p>
    <p class="rg2-s">Women don&rsquo;t even have the right to ask for time off on their due date.</p>
   </div>
- </div>
-</section>
-
-<section class="band band-cream" id="compare" aria-labelledby="compare-h">
- <div class="wrap">
-  <div class="cmp-head"><h2 class="cmp-top" id="compare-h">Compare every country</h2>
-  <div class="callout rtr-note" id="legend" tabindex="0"></div></div>
-  <div id="detail" aria-live="polite" class="dt-empty"><h3>Select a place</h3><p>Tap or click any name to see its minimum service rule.</p></div>
-  <script>(function(){var d=document.getElementById('detail');if(!d)return;function sync(){var h=d.querySelector('h3');var empty=!h||h.textContent==='Select a place';d.classList.toggle('dt-empty',empty);if(!empty&&!d.querySelector('.dt-x')){var b=document.createElement('button');b.type='button';b.className='dt-x';b.setAttribute('aria-label','Close');b.textContent='×';b.onclick=function(){d.classList.add('dt-empty')};d.insertBefore(b,d.firstChild)}}new MutationObserver(sync).observe(d,{childList:true});sync()})();</script>
-  <div id="chart"></div>
  </div>
 </section>
 
@@ -1665,7 +1666,7 @@ draw();
   });
 })();
 </script>
-<script>(function(){var cards=document.querySelectorAll(".acc-card");if(!cards.length)return;function set(b,o,scroll){var p=document.getElementById(b.getAttribute("aria-controls"));if(!p)return;p.classList.toggle("acc-open",o);b.setAttribute("aria-expanded",o?"true":"false");var t=b.querySelector(".acc-t");if(!b._h)b._h=t.innerHTML;t.innerHTML=o?"Click here to hide the comparison":b._h;if(o&&scroll&&p.getBoundingClientRect().top>innerHeight*.75)p.scrollIntoView({behavior:"smooth",block:"start"})}cards.forEach(function(b){b.addEventListener("click",function(){set(b,b.getAttribute("aria-expanded")!=="true",true)});if(location.hash==="#"+b.getAttribute("aria-controls"))set(b,true,false)})})();</script>
+<script>(function(){var cards=document.querySelectorAll(".acc-card");if(!cards.length)return;function set(b,o,scroll){var ps=b.getAttribute("aria-controls").split(" ").map(function(id){return document.getElementById(id)}).filter(Boolean);if(!ps.length)return;ps.forEach(function(p){p.classList.toggle("acc-open",o)});b.setAttribute("aria-expanded",o?"true":"false");var t=b.querySelector(".acc-t");if(!b._h)b._h=t.innerHTML;t.innerHTML=o?"Click here to hide the comparison":b._h;if(o&&scroll&&ps[0].getBoundingClientRect().top>innerHeight*.75)ps[0].scrollIntoView({behavior:"smooth",block:"start"})}cards.forEach(function(b){b.addEventListener("click",function(){set(b,b.getAttribute("aria-expanded")!=="true",true)});var ids=b.getAttribute("aria-controls").split(" ");if(ids.some(function(id){return location.hash==="#"+id}))set(b,true,false)})})();</script>
 <script>(function(){var h=document.getElementById("worst-h");if(!h)return;function fit(){h.style.removeProperty("font-size");if(innerWidth<700)return;h.style.setProperty("font-size","100px","important");var w=h.scrollWidth,a=h.clientWidth;if(w>0)h.style.setProperty("font-size",Math.min(72,Math.floor(100*a/w*.985))+"px","important")}fit();addEventListener("resize",fit);addEventListener("load",fit);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit)})();</script>
 <script>(function(){var b=document.getElementById("cmp-toggle");if(!b)return;var t=b.querySelector(".acc-t"),i=b.querySelector(".acc-i");function fit(){t.style.removeProperty("font-size");if(innerWidth<860||b.getAttribute("aria-expanded")==="true")return;var c=getComputedStyle(b),avail=b.clientWidth-parseFloat(c.paddingLeft)-parseFloat(c.paddingRight)-i.offsetWidth-parseFloat(c.columnGap||16)-4;t.style.setProperty("font-size","100px","important");var w=t.scrollWidth;if(w>0)t.style.setProperty("font-size",Math.min(26.24,Math.floor(100*avail/w*10)/10)+"px","important")}fit();addEventListener("resize",fit);addEventListener("load",fit);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit)})();</script>
 </body></html>
