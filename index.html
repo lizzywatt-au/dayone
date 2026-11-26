@@ -858,6 +858,8 @@ html.acc-js body section#experts .imp-band2 .imp-grid .imp-tile:not(.it-open) .i
 @media(prefers-reduced-motion:reduce){html body section#experts .imp-band2 .imp-tile .it-btn svg{transition:none}}
 /* centre the "Miss the cut" heading */
 html body section#experts h3.imp-h.imp-h2x{text-align:center!important}
+/* asks: one-line phasing note under each call */
+html body section#support .asks li .ask-s{grid-column:2;grid-row:2;margin:0;font-size:clamp(15px,1.5vw,19px);font-weight:500;line-height:1.3;color:#3d2436;white-space:normal}
 /* tighter spacing: contact section and the sources section below it */
 html body section#contact.band{padding-top:clamp(22px,2.6vw,36px)!important;padding-bottom:clamp(22px,2.6vw,36px)!important}
 html body section#source.band{padding-top:clamp(22px,2.6vw,36px)!important}
@@ -1326,7 +1328,6 @@ h3.imp-h:not([style]){font-family:"Inter","Helvetica Neue",Arial,sans-serif!impo
 </div>
 <p class="bz2-k" style="margin-top:clamp(24px,3vw,36px)!important">Why it helps</p><div class="bx-why"><div><b>Ideas spread</b><span>People who change jobs carry skills and ideas with them, lifting productivity across businesses.</span></div><div><b>Better matching</b><span>Employees who move into roles that suit them become more productive and earn more.</span></div><div><b>Attracting talent</b><span>Employees shift to more productive, growing businesses, which can attract the talent they need.</span></div></div>
 <div class="bx-stats"><div class="bx-tile"><i><a href="https://grattan.edu.au/news/low-job-mobility-is-holding-australia-back/" target="_blank" rel="noopener">The Grattan Institute reported</a></i><b>7.7%</b><span>job mobility in 2025, a drop from 10&ndash;13% in the 1990s</span></div><div class="bx-tile"><b>Many</b><span>large companies and organisations in Australia already offer day one parental leave</span><span class="bx-who" tabindex="0">&#9432;&nbsp; Hover to see who<span class="bx-tip" role="tooltip">Include: IKEA, Coles, Big W, Google, Microsoft, Commonwealth Bank, NAB, KPMG, Deloitte, PwC, Allens, Stockland, Motorola, the Victorian Public Service, the University of Melbourne and UNSW</span></span></div><div class="bx-tile"><i><a href="https://wgea.gov.au/sites/default/files/documents/Advancing-gender-equitable-take-up-of-PPL-and-flexible-work.pdf" target="_blank" rel="noopener">Australia&rsquo;s Workplace Gender Equality Agency reported a</a></i><b>+20%</b><span>increase in men taking parental leave after KPMG changed</span></div></div>
-<p class="bz2-k">How to ease it in</p><ol class="bz2-steps"><li><b>Phase it in</b><span>Lower the 12-month wait gradually, starting at 40 weeks.</span></li><li><b>Pregnant women first</b><span>Give pregnant women day one leave, or a shorter wait, first.</span></li><li><b>Then dads and partners</b><span>Extend the shorter wait to dads and other partners.</span></li><li><b>Support small business</b><span>Offer small businesses transition periods.</span></li></ol>
 <div class="bz-nz"><b>A Kiwi example</b><p>New Zealand has gradually improved access to parental leave. Since 2016, employees with 6 months&rsquo; service can take 6 months&rsquo; leave, and those with 12 months&rsquo; service can take 12 months&rsquo;. New starters can request leave too.</p></div>
 </div>
  </div>
@@ -1352,7 +1353,7 @@ h3.imp-h:not([style]){font-family:"Inter","Helvetica Neue",Arial,sans-serif!impo
 <section class="band band-terra" id="support" aria-labelledby="support-h">
  <div class="wrap">
   <h2 class="t" id="support-h">Support the call to:</h2>
-  <div class="asks"><h3>What we&rsquo;re asking for</h3><ol><li><strong>Drop, or gradually shorten, the 12-month test for pregnant women.</strong></li><li><strong>Extend day one parental leave to dads and partners.</strong></li><li><strong>Support small business to adapt.</strong></li></ol></div>
+  <div class="asks"><h3>What we&rsquo;re asking for</h3><ol><li><strong>Drop, or gradually shorten, the 12-month test for pregnant women.</strong><span class="ask-s">Phase it in, starting at 40 weeks.</span></li><li><strong>Extend day one parental leave to dads and partners.</strong><span class="ask-s">Then extend the shorter wait to them.</span></li><li><strong>Support small business to adapt.</strong><span class="ask-s">With transition periods.</span></li></ol></div>
   <style>
 #support .pt{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(14px,2vw,24px);align-items:stretch;margin-top:clamp(8px,1.6vw,20px)}
 #support .pt-count{display:inline-block;background:#253e38;color:#f5e9d7;font-weight:800;font-size:14px;letter-spacing:.01em;padding:9px 14px;border-radius:8px;margin:0 0 14px}
