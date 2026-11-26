@@ -768,6 +768,11 @@ html body section#experts p.lead.lead-b .lb-r .pj{margin-top:clamp(20px,2.2vw,32
 }
 /* no white strip between the stat band and the photo section: the gap is cream padding now */
 @media (min-width:761px){html body #experts .stat6-band{padding-bottom:38px!important}}
+/* "MORE THAN" sits to the left of the giant 1 in 6, bottom-aligned */
+@media (min-width:761px){
+html body #experts .stat6-in .s6-box{flex-direction:row!important;align-items:flex-end!important;gap:clamp(12px,1.4vw,22px)!important}
+html body #experts .stat6-in .s6-box em:first-child{width:min-content!important;line-height:1.15!important;margin:0 0 clamp(10px,1.3vw,20px)!important;font-size:clamp(15px,1.5vw,22px)!important}
+}
 /* tighter spacing: contact section and the sources section below it */
 html body section#contact.band{padding-top:clamp(22px,2.6vw,36px)!important;padding-bottom:clamp(22px,2.6vw,36px)!important}
 html body section#source.band{padding-top:clamp(22px,2.6vw,36px)!important}
