@@ -745,6 +745,12 @@ html body section#experts p.lead.lead-b .lb-img{border-radius:0!important}
 /* explainer box: rounded corners */
 html body section#experts p.lead.lead-b .pj{border-radius:16px!important;overflow:hidden}
 html body section#experts p.lead.lead-b .pj-btn{border-radius:0!important}
+/* 1-in-6 section: more room above the headline, less below the photo */
+@media (min-width:761px){
+html body #experts .stat6-band{padding-top:clamp(52px,7.2vw,100px)!important}
+html body section#experts .imp-band .imp-grid{padding-top:clamp(26px,3vw,42px)!important}
+html body section#experts p.lead.lead-b .lb-r{padding-bottom:clamp(8px,1vw,14px)!important}
+}
 /* tighter spacing: contact section and the sources section below it */
 html body section#contact.band{padding-top:clamp(22px,2.6vw,36px)!important;padding-bottom:clamp(22px,2.6vw,36px)!important}
 html body section#source.band{padding-top:clamp(22px,2.6vw,36px)!important}
