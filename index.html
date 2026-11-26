@@ -873,6 +873,13 @@ html body section#experts div#economy .bx-why .bw-p{margin-top:clamp(8px,1vw,12p
 html:not(.acc-js) body section#experts div#economy .bx-why .bw-btn svg{display:none}
 html.acc-js body section#experts div#economy .bx-why .bw-tile:not(.bw-open) .bw-p{display:none!important}
 @media(prefers-reduced-motion:reduce){html body section#experts div#economy .bx-why .bw-btn svg{transition:none}}
+/* "Why it helps": light accordion rows (rules, not boxes) so it doesn't echo the dark stat tiles */
+html body section#experts div#economy .bx-why{display:block!important;max-width:none!important}
+html body section#experts div#economy .bx-why>div.bw-tile{background:none!important;border:0!important;border-top:2px solid #e9824a!important;border-radius:0!important;padding:clamp(14px,1.6vw,20px) 0!important}
+html body section#experts div#economy .bx-why>div.bw-tile:last-child{border-bottom:2px solid #e9824a!important}
+html body section#experts div#economy .bx-why .bw-btn b{font-size:clamp(20px,2.2vw,28px)!important}
+html body section#experts div#economy .bx-why .bw-btn svg{color:#c04e34}
+html body section#experts div#economy .bx-why .bw-p{max-width:46em;font-size:clamp(16px,1.5vw,19px)!important}
 /* tighter spacing: contact section and the sources section below it */
 html body section#contact.band{padding-top:clamp(22px,2.6vw,36px)!important;padding-bottom:clamp(22px,2.6vw,36px)!important}
 html body section#source.band{padding-top:clamp(22px,2.6vw,36px)!important}
