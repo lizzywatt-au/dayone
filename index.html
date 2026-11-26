@@ -778,6 +778,12 @@ html body #experts .stat6-in .s6-box em:first-child{width:min-content!important;
 html body #experts .stat6-in .s6-box{align-items:center!important}
 html body #experts .stat6-in .s6-box em:first-child{writing-mode:vertical-rl!important;transform:rotate(180deg)!important;width:auto!important;margin:0!important;white-space:nowrap!important;line-height:1!important;letter-spacing:.2em!important;font-size:clamp(15px,1.5vw,22px)!important}
 }
+/* MORE THAN spans exactly the height of the 1 in 6 numerals; even gaps all round */
+@media (min-width:761px){
+html body #experts .stat6-in .s6-box{gap:clamp(22px,2.8vw,44px)!important}
+html body #experts .stat6-in{column-gap:clamp(22px,2.8vw,44px)!important}
+html body #experts .stat6-in .s6-box em:first-child{font-size:calc(clamp(84px,12.5vw,190px) * .092)!important;letter-spacing:.2em!important;position:relative;top:calc(clamp(84px,12.5vw,190px) * -.03)}
+}
 /* tighter spacing: contact section and the sources section below it */
 html body section#contact.band{padding-top:clamp(22px,2.6vw,36px)!important;padding-bottom:clamp(22px,2.6vw,36px)!important}
 html body section#source.band{padding-top:clamp(22px,2.6vw,36px)!important}
