@@ -831,6 +831,9 @@ html body section#experts .imp-band:not(.imp-band2) .imp-tile .it-btn:focus-visi
 html:not(.acc-js) body section#experts .imp-tile .it-btn svg{display:none}
 html.acc-js body section#experts .imp-band:not(.imp-band2) .imp-grid .imp-tile:not(.it-open) .it-p{display:none!important}
 @media(prefers-reduced-motion:reduce){html body section#experts .imp-band:not(.imp-band2) .imp-tile .it-btn svg{transition:none}}
+/* impact accordion: same layout on every row (no alternating) */
+html body section#experts .imp-band:not(.imp-band2) .imp-grid .imp-tile:nth-child(n) .it-btn b{order:0!important;text-align:left!important;justify-content:flex-start!important}
+html body section#experts .imp-band:not(.imp-band2) .imp-grid .imp-tile:nth-child(n) .it-btn svg{order:1}
 /* tighter spacing: contact section and the sources section below it */
 html body section#contact.band{padding-top:clamp(22px,2.6vw,36px)!important;padding-bottom:clamp(22px,2.6vw,36px)!important}
 html body section#source.band{padding-top:clamp(22px,2.6vw,36px)!important}
