@@ -889,9 +889,9 @@ html body section#experts p.lead.lead-b .lb-img{border-radius:12px!important;mar
 }
 /* mobile only: logo fills the same width as a button column and sits level with the first button */
 @media (max-width:760px){
-html body header#top .topbar .logo{display:block!important;width:100%!important;align-self:center!important;justify-self:stretch!important;margin:0!important}
-html body header#top .topbar .logo svg{display:block!important;width:100%!important;height:auto!important;max-height:none!important}
-html body header#top .topbar .nav a:first-child{align-self:center!important}
+html body header#top .topbar .logo{display:block!important;position:relative!important;width:100%!important;height:auto!important;min-height:0!important;align-self:stretch!important;justify-self:stretch!important;margin:0!important}
+html body header#top .topbar .logo svg{display:block!important;position:absolute!important;left:0!important;top:0!important;width:100%!important;height:100%!important;max-height:none!important}
+html body header#top .topbar .nav a:first-child{align-self:stretch!important}
 }
 @media (max-width:390px){html body header#top .topbar .nav a{padding-left:6px!important;padding-right:6px!important;font-size:12.5px!important;white-space:nowrap!important}
 }
