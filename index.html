@@ -832,6 +832,15 @@ html body #experts .stat6-in>p{flex:1 1 0!important;min-width:0!important;margin
 }
 /* mobile only: "Who's hit the hardest?" matches the green "Women are being locked in..." band (no white, cream heading) */
 @media(max-width:860px){html body section#experts div.imp-band2{background:#253e38!important;box-shadow:0 0 0 100vmax #253e38!important}html body section#experts div.imp-band2 > h3.imp-h,html body section#experts div.imp-band2 > h3.imp-h *{color:#f5e9d7!important}html body section#experts div.imp-band2 .imp-grid{padding-top:clamp(4px,2vw,16px)!important}}
+/* mobile only: sentence top aligns with top of "MORE THAN", its last line's baseline with the bottom of "1 in 6" */
+@media (min-width:351px) and (max-width:500px){
+html body #experts .stat6-in{align-items:flex-start!important}
+html body #experts .stat6-in .s6-box em:first-child,html body #experts .stat6-in .s6-box b{text-box:trim-both cap alphabetic!important}
+html body #experts .stat6-in .s6-box b{margin:12px 0 0!important}
+html body #experts .stat6-in>p{--fs:clamp(12px,calc((100vw - 185px) / 14.6),17px);font-size:var(--fs)!important;line-height:calc((var(--h,66.9px) - .727 * var(--fs)) / 2)!important;text-box:trim-both cap alphabetic!important}
+}
+/* very narrow phones: sentence drops below the numeral instead of squeezing beside it */
+@media (max-width:350px){html body #experts .stat6-in{flex-wrap:wrap!important}html body #experts .stat6-in>p{flex:1 1 100%!important}}
 /* impact list: accordion rows (heading visible, detail opens on click) */
 html body section#experts .imp-band:not(.imp-band2) .imp-tile .it-btn{display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%;margin:0;padding:0;background:none;border:0;border-radius:0;color:#f5e9d7;font:inherit;text-align:left;cursor:pointer}
 html body section#experts .imp-band:not(.imp-band2) .imp-tile .it-btn b{flex:1 1 auto}
